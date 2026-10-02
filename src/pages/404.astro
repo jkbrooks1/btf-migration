@@ -1,0 +1,85 @@
+---
+// Staging 404 page. Cloudflare Pages serves dist/404.html with HTTP 404 for unknown paths.
+// Staging protections stay on: noindex meta here, X-Robots-Tag via site/_headers, robots.txt.
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>Page not found | BikeTourFrance.net</title>
+    <link rel="icon" href="/assets/framerusercontent.com/sites/icons/default-favicon-light.v1.png" />
+    <style>
+      :root {
+        --bar: #dadfeb;
+        --ink: #1c1c1c;
+        --green: #2f5d1f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: Montserrat, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        background: #fff;
+      }
+      header {
+        background: var(--bar);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 24px;
+      }
+      header a {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 18px;
+      }
+      header img { width: 40px; height: 40px; }
+      main {
+        flex: 1;
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 64px 24px;
+        text-align: center;
+      }
+      h1 { font-size: 40px; line-height: 1.15; margin: 0 0 16px; }
+      p { font-size: 18px; line-height: 1.5; margin: 0 0 24px; }
+      .links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+      .button {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 4px;
+        background: var(--green);
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .button.secondary { background: #fff; color: var(--green); border: 1px solid var(--green); }
+      footer { padding: 16px 24px; text-align: center; font-size: 14px; color: #555; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <img src="/assets/framerusercontent.com/images/6ZiXS9xFDDZg9KFI1k8jKh1qzY.png" alt="" />
+        <span>BikeTourFrance.net</span>
+      </a>
+    </header>
+    <main>
+      <h1>Page not found</h1>
+      <p>We could not find that page. It may have moved, or the link may be mistyped.</p>
+      <div class="links">
+        <a class="button" href="/">Back to the home page</a>
+        <a class="button secondary" href="/resources/">Resources</a>
+      </div>
+    </main>
+    <footer>Staging site. Not indexed.</footer>
+  </body>
+</html>
